@@ -24,11 +24,12 @@ func main() {
 	store, err := storage.NewStore(cfg.Storage.Path)
 	if err != nil {
 		log.Error("cannot initializin storage", "error", err)
+		os.Exit(1)
 	}
 
 	log.Info("server has started", "port", cfg.HTTP.Port, "store enabled on", cfg.Storage.Path)
 
-	srv := api.NewServer(cfg.HTTP.Port, store)
+	srv := api.NewServer(*cfg, store)
 	srv.Run()
 }
 
