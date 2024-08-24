@@ -8,6 +8,15 @@ import (
 	"github.com/koha90/podkrepizza_v1/internal/types"
 )
 
+/*
+TODO: create handlers for categories by ID.
+
+	GET /categorys
+	GET /categorys/{id}
+	POST /categorys
+	PUT /categorys/{id}
+	DELETE /categorys/{id}
+*/
 func (s *Server) handleCreateAccount(w http.ResponseWriter, r *http.Request) error {
 	req := new(types.CreateAccountRequest)
 
@@ -86,13 +95,4 @@ func (s *Server) handleUpdateAccount(w http.ResponseWriter, r *http.Request) err
 	}
 
 	return WriteJSON(w, http.StatusOK, id)
-}
-
-func (s *Server) handleGetProducts(w http.ResponseWriter, r *http.Request) error {
-	products, err := s.store.AllProducts()
-	if err != nil {
-		return err
-	}
-
-	return WriteJSON(w, http.StatusOK, products)
 }
