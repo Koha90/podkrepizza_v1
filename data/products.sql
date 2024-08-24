@@ -134,6 +134,9 @@ INSERT INTO Products (name, description, image_url, category, price) VALUES
   ('Томатный', ' ', './img/sauce/tomato_sauce.jpg', 10, 90.00),
   ('Кетчуп', ' ', './img/sauce/ketchup.jpg', 10, 90.00),
   ('Барбекю', ' ', './img/sauce/bbq.jpg', 10, 90.00),
+  ('Майонез', ' ', './img/sauce/mayonnaise.jpg', 10, 90.00),
+  ('Кисло-сладкий', ' ', './img/sauce/sweet_and_sour.jpg', 10, 90.00),
+  ('Чилли-острый', ' ', './img/sauce/chilli_ostre.jpg', 10, 90.00),
 -- Drinkables
   ('Морс', ' ', './img/drinkables/mors.jpg', 11, 80.00),
   ('Молочный коктейль', 'Клубничный, Ванильный или Шоколадный', './img/drinkables/milk_shake.jpg', 11, 240.00),
